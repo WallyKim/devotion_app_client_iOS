@@ -4,7 +4,7 @@
 //
 //  Created by Woong-Ki Kim on 12. 7. 14..
 //  Copyright (c) 2012년 __MyCompanyName__. All rights reserved.
-//  Git
+//
 
 #import "AppDelegate.h"
 
