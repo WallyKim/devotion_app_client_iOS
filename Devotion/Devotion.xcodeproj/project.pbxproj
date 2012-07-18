@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E1990D415B111B20055B334 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1990D315B111B20055B334 /* UIKit.framework */; };
+		3E1990D615B111B20055B334 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1990D515B111B20055B334 /* Foundation.framework */; };
+		3E1990D815B111B20055B334 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1990D715B111B20055B334 /* CoreGraphics.framework */; };
+		3E1990DA15B111B20055B334 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1990D915B111B20055B334 /* CoreData.framework */; };
+		3E1990E015B111B20055B334 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E1990DE15B111B20055B334 /* InfoPlist.strings */; };
+		3E1990E215B111B20055B334 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990E115B111B20055B334 /* main.m */; };
+		3E1990E615B111B20055B334 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990E515B111B20055B334 /* AppDelegate.m */; };
+		3E1990E915B111B20055B334 /* Devotion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990E715B111B20055B334 /* Devotion.xcdatamodeld */; };
+		3E19910915B112F30055B334 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990F315B112F30055B334 /* ASIAuthenticationDialog.m */; };
+		3E19910A15B112F30055B334 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990F615B112F30055B334 /* ASIDataCompressor.m */; };
+		3E19910B15B112F30055B334 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990F815B112F30055B334 /* ASIDataDecompressor.m */; };
+		3E19910C15B112F30055B334 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990FA15B112F30055B334 /* ASIDownloadCache.m */; };
+		3E19910D15B112F30055B334 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990FC15B112F30055B334 /* ASIFormDataRequest.m */; };
+		3E19910E15B112F30055B334 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990FE15B112F30055B334 /* ASIHTTPRequest.m */; };
+		3E19910F15B112F30055B334 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E19910215B112F30055B334 /* ASIInputStream.m */; };
+		3E19911015B112F30055B334 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E19910415B112F30055B334 /* ASINetworkQueue.m */; };
+		3E19911115B112F30055B334 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E19910815B112F30055B334 /* Reachability.m */; };
+		3E19911315B113710055B334 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E19911215B113710055B334 /* CFNetwork.framework */; };
+		3E19911515B1137B0055B334 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E19911415B1137B0055B334 /* SystemConfiguration.framework */; };
+		3E19911715B113880055B334 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E19911615B113880055B334 /* MobileCoreServices.framework */; };
+		3E19911915B113950055B334 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E19911815B113950055B334 /* libz.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E1990CF15B111B20055B334 /* Devotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Devotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E1990D315B111B20055B334 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3E1990D515B111B20055B334 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3E1990D715B111B20055B334 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3E1990D915B111B20055B334 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3E1990DD15B111B20055B334 /* Devotion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Devotion-Info.plist"; sourceTree = "<group>"; };
+		3E1990DF15B111B20055B334 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3E1990E115B111B20055B334 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3E1990E315B111B20055B334 /* Devotion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Devotion-Prefix.pch"; sourceTree = "<group>"; };
+		3E1990E415B111B20055B334 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3E1990E515B111B20055B334 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3E1990E815B111B20055B334 /* Devotion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Devotion.xcdatamodel; sourceTree = "<group>"; };
+		3E1990F215B112F30055B334 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		3E1990F315B112F30055B334 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		3E1990F415B112F30055B334 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		3E1990F515B112F30055B334 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		3E1990F615B112F30055B334 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		3E1990F715B112F30055B334 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		3E1990F815B112F30055B334 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		3E1990F915B112F30055B334 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		3E1990FA15B112F30055B334 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		3E1990FB15B112F30055B334 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		3E1990FC15B112F30055B334 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		3E1990FD15B112F30055B334 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		3E1990FE15B112F30055B334 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		3E1990FF15B112F30055B334 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		3E19910015B112F30055B334 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		3E19910115B112F30055B334 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		3E19910215B112F30055B334 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		3E19910315B112F30055B334 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		3E19910415B112F30055B334 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		3E19910515B112F30055B334 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		3E19910715B112F30055B334 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		3E19910815B112F30055B334 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		3E19911215B113710055B334 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3E19911415B1137B0055B334 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3E19911615B113880055B334 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3E19911815B113950055B334 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E1990CC15B111B20055B334 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E19911915B113950055B334 /* libz.dylib in Frameworks */,
+				3E19911715B113880055B334 /* MobileCoreServices.framework in Frameworks */,
+				3E19911515B1137B0055B334 /* SystemConfiguration.framework in Frameworks */,
+				3E19911315B113710055B334 /* CFNetwork.framework in Frameworks */,
+				3E1990D415B111B20055B334 /* UIKit.framework in Frameworks */,
+				3E1990D615B111B20055B334 /* Foundation.framework in Frameworks */,
+				3E1990D815B111B20055B334 /* CoreGraphics.framework in Frameworks */,
+				3E1990DA15B111B20055B334 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E1990C415B111B10055B334 = {
+			isa = PBXGroup;
+			children = (
+				3E1990DB15B111B20055B334 /* Devotion */,
+				3E1990D215B111B20055B334 /* Frameworks */,
+				3E1990D015B111B20055B334 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3E1990D015B111B20055B334 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E1990CF15B111B20055B334 /* Devotion.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E1990D215B111B20055B334 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E19911815B113950055B334 /* libz.dylib */,
+				3E19911615B113880055B334 /* MobileCoreServices.framework */,
+				3E19911415B1137B0055B334 /* SystemConfiguration.framework */,
+				3E19911215B113710055B334 /* CFNetwork.framework */,
+				3E1990D315B111B20055B334 /* UIKit.framework */,
+				3E1990D515B111B20055B334 /* Foundation.framework */,
+				3E1990D715B111B20055B334 /* CoreGraphics.framework */,
+				3E1990D915B111B20055B334 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E1990DB15B111B20055B334 /* Devotion */ = {
+			isa = PBXGroup;
+			children = (
+				3E1990EF15B112F30055B334 /* Classes */,
+				3E1990E415B111B20055B334 /* AppDelegate.h */,
+				3E1990E515B111B20055B334 /* AppDelegate.m */,
+				3E1990E715B111B20055B334 /* Devotion.xcdatamodeld */,
+				3E1990DC15B111B20055B334 /* Supporting Files */,
+			);
+			path = Devotion;
+			sourceTree = "<group>";
+		};
+		3E1990DC15B111B20055B334 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E1990DD15B111B20055B334 /* Devotion-Info.plist */,
+				3E1990DE15B111B20055B334 /* InfoPlist.strings */,
+				3E1990E115B111B20055B334 /* main.m */,
+				3E1990E315B111B20055B334 /* Devotion-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E1990EF15B112F30055B334 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3E1990F015B112F30055B334 /* Utils */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3E1990F015B112F30055B334 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3E1990F115B112F30055B334 /* ASIHTTPRequest */,
+				3E19910615B112F30055B334 /* Reachability */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3E1990F115B112F30055B334 /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				3E1990F215B112F30055B334 /* ASIAuthenticationDialog.h */,
+				3E1990F315B112F30055B334 /* ASIAuthenticationDialog.m */,
+				3E1990F415B112F30055B334 /* ASICacheDelegate.h */,
+				3E1990F515B112F30055B334 /* ASIDataCompressor.h */,
+				3E1990F615B112F30055B334 /* ASIDataCompressor.m */,
+				3E1990F715B112F30055B334 /* ASIDataDecompressor.h */,
+				3E1990F815B112F30055B334 /* ASIDataDecompressor.m */,
+				3E1990F915B112F30055B334 /* ASIDownloadCache.h */,
+				3E1990FA15B112F30055B334 /* ASIDownloadCache.m */,
+				3E1990FB15B112F30055B334 /* ASIFormDataRequest.h */,
+				3E1990FC15B112F30055B334 /* ASIFormDataRequest.m */,
+				3E1990FD15B112F30055B334 /* ASIHTTPRequest.h */,
+				3E1990FE15B112F30055B334 /* ASIHTTPRequest.m */,
+				3E1990FF15B112F30055B334 /* ASIHTTPRequestConfig.h */,
+				3E19910015B112F30055B334 /* ASIHTTPRequestDelegate.h */,
+				3E19910115B112F30055B334 /* ASIInputStream.h */,
+				3E19910215B112F30055B334 /* ASIInputStream.m */,
+				3E19910315B112F30055B334 /* ASINetworkQueue.h */,
+				3E19910415B112F30055B334 /* ASINetworkQueue.m */,
+				3E19910515B112F30055B334 /* ASIProgressDelegate.h */,
+			);
+			path = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		3E19910615B112F30055B334 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				3E19910715B112F30055B334 /* Reachability.h */,
+				3E19910815B112F30055B334 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E1990CE15B111B20055B334 /* Devotion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E1990EC15B111B20055B334 /* Build configuration list for PBXNativeTarget "Devotion" */;
+			buildPhases = (
+				3E1990CB15B111B20055B334 /* Sources */,
+				3E1990CC15B111B20055B334 /* Frameworks */,
+				3E1990CD15B111B20055B334 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Devotion;
+			productName = Devotion;
+			productReference = 3E1990CF15B111B20055B334 /* Devotion.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E1990C615B111B10055B334 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 3E1990C915B111B10055B334 /* Build configuration list for PBXProject "Devotion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3E1990C415B111B10055B334;
+			productRefGroup = 3E1990D015B111B20055B334 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E1990CE15B111B20055B334 /* Devotion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E1990CD15B111B20055B334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E1990E015B111B20055B334 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E1990CB15B111B20055B334 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E1990E215B111B20055B334 /* main.m in Sources */,
+				3E1990E615B111B20055B334 /* AppDelegate.m in Sources */,
+				3E1990E915B111B20055B334 /* Devotion.xcdatamodeld in Sources */,
+				3E19910915B112F30055B334 /* ASIAuthenticationDialog.m in Sources */,
+				3E19910A15B112F30055B334 /* ASIDataCompressor.m in Sources */,
+				3E19910B15B112F30055B334 /* ASIDataDecompressor.m in Sources */,
+				3E19910C15B112F30055B334 /* ASIDownloadCache.m in Sources */,
+				3E19910D15B112F30055B334 /* ASIFormDataRequest.m in Sources */,
+				3E19910E15B112F30055B334 /* ASIHTTPRequest.m in Sources */,
+				3E19910F15B112F30055B334 /* ASIInputStream.m in Sources */,
+				3E19911015B112F30055B334 /* ASINetworkQueue.m in Sources */,
+				3E19911115B112F30055B334 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3E1990DE15B111B20055B334 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E1990DF15B111B20055B334 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E1990EA15B111B20055B334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3E1990EB15B111B20055B334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E1990ED15B111B20055B334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Devotion/Devotion-Prefix.pch";
+				INFOPLIST_FILE = "Devotion/Devotion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3E1990EE15B111B20055B334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Devotion/Devotion-Prefix.pch";
+				INFOPLIST_FILE = "Devotion/Devotion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E1990C915B111B10055B334 /* Build configuration list for PBXProject "Devotion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E1990EA15B111B20055B334 /* Debug */,
+				3E1990EB15B111B20055B334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E1990EC15B111B20055B334 /* Build configuration list for PBXNativeTarget "Devotion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E1990ED15B111B20055B334 /* Debug */,
+				3E1990EE15B111B20055B334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3E1990E715B111B20055B334 /* Devotion.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3E1990E815B111B20055B334 /* Devotion.xcdatamodel */,
+			);
+			currentVersion = 3E1990E815B111B20055B334 /* Devotion.xcdatamodel */;
+			path = Devotion.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3E1990C615B111B10055B334 /* Project object */;
+}
