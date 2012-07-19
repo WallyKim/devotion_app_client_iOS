@@ -3,10 +3,11 @@
 //  Devotion
 //
 //  Created by Woong-Ki Kim on 12. 7. 14..
-//  Copyright (c) 2012년 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012년 NewPerson. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "MainCategoryViewController.h"
 
 @implementation AppDelegate
 
@@ -15,12 +16,17 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
+@synthesize m_pMainCategoryViewController;
+
 - (void)dealloc
 {
     [_window release];
     [__managedObjectContext release];
     [__managedObjectModel release];
     [__persistentStoreCoordinator release];
+    
+    [m_pMainCategoryViewController release];
+    
     [super dealloc];
 }
 
@@ -29,6 +35,15 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
+    m_pMainCategoryViewController = [[MainCategoryViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    UINavigationController* pNavigationController = [[UINavigationController alloc] initWithRootViewController:m_pMainCategoryViewController];
+    [self.window addSubview:pNavigationController.view];
+    [pNavigationController release];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

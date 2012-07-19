@@ -3,7 +3,7 @@
 //  Devotion
 //
 //  Created by Woong-Ki Kim on 12. 7. 14..
-//  Copyright (c) 2012년 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012년 NewPerson. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

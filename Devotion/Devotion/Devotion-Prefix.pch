@@ -12,4 +12,15 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
+    #import "ServerManager.h"
+    #import "Config.h"
+#endif
+
+
+// for DEBUGGING Log option, Add "-D_DEBUG_LOG" in "Debug Build Settings => GCC 4.x - Language => Other C Flags"
+// in Release settings, just DO NOT USE "-D_DEBUG_LOG" then all "NSLog()" will be ignored !
+#ifdef _DEBUG_LOG
+#define NSLog(fmt, ...) NSLog((@"%s[Line: %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define NSLog(...)
 #endif
