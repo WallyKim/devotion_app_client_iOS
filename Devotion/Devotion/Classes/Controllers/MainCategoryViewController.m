@@ -11,16 +11,19 @@
 @interface MainCategoryViewController ()
 
 @property (nonatomic, retain) ServerManager* m_pServerManager;
+@property (nonatomic, retain) NSMutableArray* m_pMArrCategories;
 
 @end
 
 @implementation MainCategoryViewController
 
 @synthesize m_pServerManager;
+@synthesize m_pMArrCategories;
 
 - (void)dealloc
 {
     [m_pServerManager release];
+    [m_pMArrCategories release];
     
     [super dealloc];
 }
@@ -31,6 +34,7 @@
     if (self) {
         // Custom initialization
         m_pServerManager = [[ServerManager alloc] init];
+        m_pMArrCategories = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -56,6 +60,9 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    
+    self.m_pServerManager = nil;
+    self.m_pMArrCategories = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -89,16 +96,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    NSInteger nRow = [self.m_pMArrCategories count];
+    return nRow;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -107,6 +113,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    }
+    
+    NSDictionary* pDicCategory = (NSDictionary *)[self.m_pMArrCategories objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [pDicCategory objectForKey:@"title"];
     
     return cell;
 }
@@ -203,6 +216,10 @@
 - (void)requestDevotion:(ServerRequest *)request didLoad:(id)result
 {    
     NSLog(@"%@", result);
+    
+    self.m_pMArrCategories = result;
+    
+    [self.tableView reloadData];
 }
 
 @end

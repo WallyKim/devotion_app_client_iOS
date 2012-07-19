@@ -8,8 +8,9 @@
 
 #import "ServerManager.h"
 
-//static NSString* kAPIBaseURL = @"http://devotion.herokuapp.com/";
-static NSString* kAPIBaseURL = @"http://0.0.0.0:3000/";
+static NSString* kAPIBaseURL = @"http://devotion.herokuapp.com/";
+//static NSString* kAPIBaseURL = @"http://0.0.0.0:3000/";
+//static NSString* kAPIBaseURL = @"http://169.254.151.147:3000/";
 
 @interface ServerManager()
 
