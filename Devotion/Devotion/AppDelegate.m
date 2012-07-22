@@ -42,7 +42,6 @@
     
     UINavigationController* pNavigationController = [[UINavigationController alloc] initWithRootViewController:m_pMainCategoryViewController];
     [self.window addSubview:pNavigationController.view];
-    [pNavigationController release];
     
     [self.window makeKeyAndVisible];
     

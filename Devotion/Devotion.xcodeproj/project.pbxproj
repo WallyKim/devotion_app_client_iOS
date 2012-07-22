@@ -28,6 +28,15 @@
 		3E19911515B1137B0055B334 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E19911415B1137B0055B334 /* SystemConfiguration.framework */; };
 		3E19911715B113880055B334 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E19911615B113880055B334 /* MobileCoreServices.framework */; };
 		3E19911915B113950055B334 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E19911815B113950055B334 /* libz.dylib */; };
+		3E87D6AC15BC2CB900C1C98D /* Devotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E87D6AB15BC2CB900C1C98D /* Devotion.m */; };
+		3E87D6B015BC4ACA00C1C98D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E87D6AE15BC4AC900C1C98D /* SettingViewController.m */; };
+		3E87D6B115BC4ACA00C1C98D /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E87D6AF15BC4AC900C1C98D /* SettingViewController.xib */; };
+		3E87D6B515BC508300C1C98D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E87D6B315BC508300C1C98D /* DetailViewController.m */; };
+		3E87D6B615BC508300C1C98D /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E87D6B415BC508300C1C98D /* DetailViewController.xib */; };
+		3EAF5D1615B9B27A00A5D60D /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF5D1415B9B27A00A5D60D /* GuideViewController.m */; };
+		3EAF5D1715B9B27A00A5D60D /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EAF5D1515B9B27A00A5D60D /* GuideViewController.xib */; };
+		3EAF5D1C15B9B85300A5D60D /* DevotionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF5D1A15B9B85300A5D60D /* DevotionListViewController.m */; };
+		3EAF5D1D15B9B85300A5D60D /* DevotionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EAF5D1B15B9B85300A5D60D /* DevotionListViewController.xib */; };
 		CE8BCB2115B78D9F00163506 /* MainCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB1F15B78D9F00163506 /* MainCategoryViewController.m */; };
 		CE8BCB2215B78D9F00163506 /* MainCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8BCB2015B78D9F00163506 /* MainCategoryViewController.xib */; };
 		CE8BCB2B15B791FE00163506 /* ServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB2A15B791FE00163506 /* ServerManager.m */; };
@@ -85,6 +94,20 @@
 		3E19911415B1137B0055B334 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3E19911615B113880055B334 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3E19911815B113950055B334 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3E87D6AA15BC2CB900C1C98D /* Devotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Devotion.h; sourceTree = "<group>"; };
+		3E87D6AB15BC2CB900C1C98D /* Devotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Devotion.m; sourceTree = "<group>"; };
+		3E87D6AD15BC4AC900C1C98D /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		3E87D6AE15BC4AC900C1C98D /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		3E87D6AF15BC4AC900C1C98D /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		3E87D6B215BC508300C1C98D /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3E87D6B315BC508300C1C98D /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3E87D6B415BC508300C1C98D /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		3EAF5D1315B9B27A00A5D60D /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		3EAF5D1415B9B27A00A5D60D /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		3EAF5D1515B9B27A00A5D60D /* GuideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuideViewController.xib; sourceTree = "<group>"; };
+		3EAF5D1915B9B85300A5D60D /* DevotionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevotionListViewController.h; sourceTree = "<group>"; };
+		3EAF5D1A15B9B85300A5D60D /* DevotionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevotionListViewController.m; sourceTree = "<group>"; };
+		3EAF5D1B15B9B85300A5D60D /* DevotionListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DevotionListViewController.xib; sourceTree = "<group>"; };
 		CE8BCB1E15B78D9F00163506 /* MainCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCategoryViewController.h; sourceTree = "<group>"; };
 		CE8BCB1F15B78D9F00163506 /* MainCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCategoryViewController.m; sourceTree = "<group>"; };
 		CE8BCB2015B78D9F00163506 /* MainCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCategoryViewController.xib; sourceTree = "<group>"; };
@@ -196,6 +219,7 @@
 		3E1990EF15B112F30055B334 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3E87D6A815BC2C9B00C1C98D /* Models */,
 				CE8BCB2315B7904300163506 /* Views */,
 				CE8BCB1D15B78D8A00163506 /* Controllers */,
 				3E1990F015B112F30055B334 /* Utils */,
@@ -251,12 +275,33 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		3E87D6A815BC2C9B00C1C98D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3E87D6AA15BC2CB900C1C98D /* Devotion.h */,
+				3E87D6AB15BC2CB900C1C98D /* Devotion.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CE8BCB1D15B78D8A00163506 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				CE8BCB1E15B78D9F00163506 /* MainCategoryViewController.h */,
 				CE8BCB1F15B78D9F00163506 /* MainCategoryViewController.m */,
 				CE8BCB2015B78D9F00163506 /* MainCategoryViewController.xib */,
+				3EAF5D1315B9B27A00A5D60D /* GuideViewController.h */,
+				3EAF5D1415B9B27A00A5D60D /* GuideViewController.m */,
+				3EAF5D1515B9B27A00A5D60D /* GuideViewController.xib */,
+				3EAF5D1915B9B85300A5D60D /* DevotionListViewController.h */,
+				3EAF5D1A15B9B85300A5D60D /* DevotionListViewController.m */,
+				3EAF5D1B15B9B85300A5D60D /* DevotionListViewController.xib */,
+				3E87D6AD15BC4AC900C1C98D /* SettingViewController.h */,
+				3E87D6AE15BC4AC900C1C98D /* SettingViewController.m */,
+				3E87D6AF15BC4AC900C1C98D /* SettingViewController.xib */,
+				3E87D6B215BC508300C1C98D /* DetailViewController.h */,
+				3E87D6B315BC508300C1C98D /* DetailViewController.m */,
+				3E87D6B415BC508300C1C98D /* DetailViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -372,6 +417,10 @@
 				CE8BCB2215B78D9F00163506 /* MainCategoryViewController.xib in Resources */,
 				CE8BCB4A15B7945900163506 /* FBConnect.bundle in Resources */,
 				CE8BCB4B15B7945900163506 /* FBDialog.bundle in Resources */,
+				3EAF5D1715B9B27A00A5D60D /* GuideViewController.xib in Resources */,
+				3EAF5D1D15B9B85300A5D60D /* DevotionListViewController.xib in Resources */,
+				3E87D6B115BC4ACA00C1C98D /* SettingViewController.xib in Resources */,
+				3E87D6B615BC508300C1C98D /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +456,11 @@
 				CE8BCB5215B7945900163506 /* SBJsonBase.m in Sources */,
 				CE8BCB5315B7945900163506 /* SBJsonParser.m in Sources */,
 				CE8BCB5415B7945900163506 /* SBJsonWriter.m in Sources */,
+				3EAF5D1615B9B27A00A5D60D /* GuideViewController.m in Sources */,
+				3EAF5D1C15B9B85300A5D60D /* DevotionListViewController.m in Sources */,
+				3E87D6AC15BC2CB900C1C98D /* Devotion.m in Sources */,
+				3E87D6B015BC4ACA00C1C98D /* SettingViewController.m in Sources */,
+				3E87D6B515BC508300C1C98D /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

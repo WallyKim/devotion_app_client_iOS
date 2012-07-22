@@ -1,33 +1,31 @@
 //
-//  MainCategoryViewController.m
+//  DevotionListViewController.m
 //  Devotion
 //
-//  Created by Kim Woong-Ki on 12. 7. 19..
-//  Copyright (c) 2012년 NewPerson. All rights reserved.
+//  Created by Woong-Ki Kim on 12. 7. 21..
+//  Copyright (c) 2012년 __MyCompanyName__. All rights reserved.
 //
 
-#import "MainCategoryViewController.h"
-#import "GuideViewController.h"
-#import "SettingViewController.h"
+#import "DevotionListViewController.h"
 
-@interface MainCategoryViewController ()
+@interface DevotionListViewController ()
 
 @property (nonatomic, retain) ServerManager* m_pServerManager;
-@property (nonatomic, retain) NSMutableArray* m_pMArrCategories;
+@property (nonatomic, retain) NSMutableArray* m_pMArrDevotionLists;
 
-- (void)goSetting;
+- (void)goHome;
 
 @end
 
-@implementation MainCategoryViewController
+@implementation DevotionListViewController
 
 @synthesize m_pServerManager;
-@synthesize m_pMArrCategories;
+@synthesize m_pMArrDevotionLists;
 
 - (void)dealloc
 {
     [m_pServerManager release];
-    [m_pMArrCategories release];
+    [m_pMArrDevotionLists release];
     
     [super dealloc];
 }
@@ -38,30 +36,25 @@
     if (self) {
         // Custom initialization
         m_pServerManager = [[ServerManager alloc] init];
-        m_pMArrCategories = [[NSMutableArray alloc] init];
+        m_pMArrDevotionLists = [[NSMutableArray alloc] init];
     }
     return self;
-}
-
-- (void)loadView
-{
-    [super loadView];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Home"
+                                                                    style:UIBarButtonSystemItemDone target:self action:@selector(goHome)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    [rightButton release];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Setting"
-                                                                    style:UIBarButtonSystemItemDone target:self action:@selector(goSetting)];
-    self.navigationItem.rightBarButtonItem = rightButton;
-    [rightButton release];
 }
 
 - (void)viewDidUnload
@@ -69,18 +62,15 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-    
     self.m_pServerManager = nil;
-    self.m_pMArrCategories = nil;
+    self.m_pMArrDevotionLists = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    self.navigationController.navigationBarHidden = NO;
-    
-    [self.m_pServerManager getRequestCategoryWithDelegate:self];
+    [self.m_pServerManager getRequestDevotionListWithDelegate:self pID:1];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -91,6 +81,8 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -105,14 +97,9 @@
 
 #pragma mark - View Events
 
-- (void)goSetting
+- (void)goHome
 {
-    SettingViewController* pViewController = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
-    UINavigationController* pNavigationController = [[UINavigationController alloc] initWithRootViewController:pViewController];
-    pNavigationController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self.navigationController presentModalViewController:pNavigationController animated:YES];
-    [pViewController release];
-    [pNavigationController release];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark - Table view data source
@@ -126,7 +113,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSInteger nRow = [self.m_pMArrCategories count];
+    NSInteger nRow = [self.m_pMArrDevotionLists count];
     return nRow;
 }
 
@@ -136,15 +123,16 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
+    // Configure the cell...
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
     }
     
-    NSDictionary* pDicCategory = (NSDictionary *)[self.m_pMArrCategories objectAtIndex:indexPath.row];
+    NSDictionary* pDicDevotionList = (NSDictionary *)[self.m_pMArrDevotionLists objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [pDicCategory objectForKey:@"title"];
+    cell.textLabel.text = [pDicDevotionList objectForKey:@"title"];
     
     return cell;
 }
@@ -192,17 +180,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GuideViewController *pViewController = [[GuideViewController alloc] initWithNibName:@"GuideViewController" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    self.navigationController.navigationBarHidden = YES;
-    
-    [self.navigationController pushViewController:pViewController animated:YES];
-    
-    NSDictionary* pDicCategory = (NSDictionary *)[self.m_pMArrCategories objectAtIndex:indexPath.row];
-    pViewController.m_pLbGuide.text = [pDicCategory objectForKey:@"guide"];
-    
-    [pViewController release];
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     [detailViewController release];
+     */
 }
 
 #pragma mark - ServerRequestDelegate
@@ -245,7 +230,7 @@
 {    
     NSLog(@"%@", result);
     
-    self.m_pMArrCategories = result;
+    self.m_pMArrDevotionLists = result;
     
     [self.tableView reloadData];
 }

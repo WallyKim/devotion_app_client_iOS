@@ -8,8 +8,8 @@
 
 #import "ServerManager.h"
 
-static NSString* kAPIBaseURL = @"http://devotion.herokuapp.com/";
-//static NSString* kAPIBaseURL = @"http://0.0.0.0:3000/";
+//static NSString* kAPIBaseURL = @"http://devotion.herokuapp.com/";
+static NSString* kAPIBaseURL = @"http://0.0.0.0:3000/";
 //static NSString* kAPIBaseURL = @"http://169.254.151.147:3000/";
 
 @interface ServerManager()
@@ -51,6 +51,18 @@ static NSString* kAPIBaseURL = @"http://devotion.herokuapp.com/";
 - (ServerRequest *)getRequestCategoryWithDelegate:(id<ServerRequestDelegate>)delegate
 {
     NSString* strRequestURL = [kAPIBaseURL stringByAppendingString:@"users/1.json"];
+    NSLog(@"%@", strRequestURL);
+    
+    return [self openUrl:strRequestURL
+                  params:nil
+              httpMethod:@"GET"
+                delegate:delegate];
+}
+
+- (ServerRequest *)getRequestDevotionListWithDelegate:(id<ServerRequestDelegate>)delegate
+                                                  pID:(NSInteger)pID
+{
+    NSString* strRequestURL = [kAPIBaseURL stringByAppendingString:[NSString stringWithFormat:@"categories/%d.json", pID]];
     NSLog(@"%@", strRequestURL);
     
     return [self openUrl:strRequestURL

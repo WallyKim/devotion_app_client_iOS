@@ -15,4 +15,7 @@
 
 - (ServerRequest *)getRequestCategoryWithDelegate:(id<ServerRequestDelegate>)delegate;
 
+- (ServerRequest *)getRequestDevotionListWithDelegate:(id<ServerRequestDelegate>)delegate
+                                                  pID:(NSInteger)pID;
+
 @end
