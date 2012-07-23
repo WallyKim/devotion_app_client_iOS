@@ -62,7 +62,6 @@
 		3E1990D715B111B20055B334 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3E1990D915B111B20055B334 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3E1990DD15B111B20055B334 /* Devotion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Devotion-Info.plist"; sourceTree = "<group>"; };
-		3E1990DF15B111B20055B334 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E1990E115B111B20055B334 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3E1990E315B111B20055B334 /* Devotion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Devotion-Prefix.pch"; sourceTree = "<group>"; };
 		3E1990E415B111B20055B334 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -108,6 +107,7 @@
 		3EAF5D1915B9B85300A5D60D /* DevotionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevotionListViewController.h; sourceTree = "<group>"; };
 		3EAF5D1A15B9B85300A5D60D /* DevotionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevotionListViewController.m; sourceTree = "<group>"; };
 		3EAF5D1B15B9B85300A5D60D /* DevotionListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DevotionListViewController.xib; sourceTree = "<group>"; };
+		CE4EC53315BD24C700C3ECB2 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = "/Users/woong-kikim/Documents/_Other_/00.Temp/devotion_app_client_iOS/Devotion/Devotion/ko.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
 		CE8BCB1E15B78D9F00163506 /* MainCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCategoryViewController.h; sourceTree = "<group>"; };
 		CE8BCB1F15B78D9F00163506 /* MainCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCategoryViewController.m; sourceTree = "<group>"; };
 		CE8BCB2015B78D9F00163506 /* MainCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCategoryViewController.xib; sourceTree = "<group>"; };
@@ -470,7 +470,7 @@
 		3E1990DE15B111B20055B334 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3E1990DF15B111B20055B334 /* en */,
+				CE4EC53315BD24C700C3ECB2 /* ko */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -553,7 +553,7 @@
 			};
 			name = Release;
 		};
-		CEFDB91715B800E400750966 /* Adhoc */ = {
+		CECB5D5E15BD25FA0057F399 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -573,7 +573,7 @@
 			};
 			name = Adhoc;
 		};
-		CEFDB91815B800E400750966 /* Adhoc */ = {
+		CECB5D5F15BD25FA0057F399 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yoon Ki Kim";
@@ -595,7 +595,7 @@
 			buildConfigurations = (
 				3E1990EA15B111B20055B334 /* Debug */,
 				3E1990EB15B111B20055B334 /* Release */,
-				CEFDB91715B800E400750966 /* Adhoc */,
+				CECB5D5E15BD25FA0057F399 /* Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -605,7 +605,7 @@
 			buildConfigurations = (
 				3E1990ED15B111B20055B334 /* Debug */,
 				3E1990EE15B111B20055B334 /* Release */,
-				CEFDB91815B800E400750966 /* Adhoc */,
+				CECB5D5F15BD25FA0057F399 /* Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

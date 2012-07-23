@@ -13,5 +13,7 @@ enum EnmNetworkState {
     Enm_TIMEOUT = 2,
 };
 
+#define NofPageDetail       4
+
 
 #endif

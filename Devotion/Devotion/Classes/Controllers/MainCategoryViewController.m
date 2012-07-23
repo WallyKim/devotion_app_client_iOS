@@ -202,6 +202,8 @@
     NSDictionary* pDicCategory = (NSDictionary *)[self.m_pMArrCategories objectAtIndex:indexPath.row];
     pViewController.m_pLbGuide.text = [pDicCategory objectForKey:@"guide"];
     
+    [[Devotion sharedObject] setPStrCategoryId:[pDicCategory objectForKey:@"id"]];
+    
     [pViewController release];
 }
 
@@ -245,9 +247,16 @@
 {    
     NSLog(@"%@", result);
     
-    self.m_pMArrCategories = result;
-    
-    [self.tableView reloadData];
+    if ([result count] == 0)
+    {
+        [self.m_pServerManager getRequestCategoryWithDelegate:self];
+    }
+    else
+    {
+        self.m_pMArrCategories = result;
+        
+        [self.tableView reloadData];   
+    }
 }
 
 @end

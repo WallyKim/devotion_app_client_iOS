@@ -7,6 +7,7 @@
 //
 
 #import "DevotionListViewController.h"
+#import "DetailViewController.h"
 
 @interface DevotionListViewController ()
 
@@ -70,7 +71,9 @@
 {
     [super viewWillAppear:animated];
     
-    [self.m_pServerManager getRequestDevotionListWithDelegate:self pID:1];
+    self.navigationController.navigationBarHidden = NO;
+    
+    [self.m_pServerManager getRequestDevotionListWithDelegate:self pID:[[Devotion sharedObject] pStrCategoryId]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -181,13 +184,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    
+    DetailViewController *pViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
      // ...
      // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    
+    [[Devotion sharedObject] setPDicDevotion:(NSDictionary *)[self.m_pMArrDevotionLists objectAtIndex:indexPath.row]];
+    
+    [self.navigationController pushViewController:pViewController animated:YES];
+    [pViewController release];
 }
 
 #pragma mark - ServerRequestDelegate

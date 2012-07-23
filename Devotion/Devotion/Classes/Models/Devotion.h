@@ -10,4 +10,9 @@
 
 @interface Devotion : NSObject
 
+@property (nonatomic, retain) NSString* pStrCategoryId;
+@property (nonatomic, retain) NSDictionary* pDicDevotion;
+
++ (Devotion*)sharedObject;
+
 @end
