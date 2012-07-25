@@ -79,7 +79,7 @@
     
     self.navigationController.navigationBarHidden = NO;
     
-    [self.m_pServerManager getRequestCategoryWithDelegate:self];
+    [self.m_pServerManager getRequestVersionWithDelegate:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -246,9 +246,9 @@
 {    
     NSLog(@"%@", result);
     
-    if ([result count] == 0)
+    if ([[request strURL] hasSuffix:@"version.json"])
     {
-        [self.m_pServerManager getRequestCategoryWithDelegate:self];
+        NSLog(@"Pass");
     }
     else
     {

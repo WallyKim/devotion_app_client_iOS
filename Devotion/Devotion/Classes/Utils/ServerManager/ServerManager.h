@@ -13,6 +13,8 @@
 
 @property (nonatomic, retain) ServerRequest* request;
 
+- (ServerRequest *)getRequestVersionWithDelegate:(id<ServerRequestDelegate>)delegate;
+
 - (ServerRequest *)getRequestCategoryWithDelegate:(id<ServerRequestDelegate>)delegate;
 
 - (ServerRequest *)getRequestDevotionListWithDelegate:(id<ServerRequestDelegate>)delegate

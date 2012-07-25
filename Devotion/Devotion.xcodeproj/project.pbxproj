@@ -36,6 +36,7 @@
 		3EAF5D1715B9B27A00A5D60D /* GuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EAF5D1515B9B27A00A5D60D /* GuideViewController.xib */; };
 		3EAF5D1C15B9B85300A5D60D /* DevotionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EAF5D1A15B9B85300A5D60D /* DevotionListViewController.m */; };
 		3EAF5D1D15B9B85300A5D60D /* DevotionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EAF5D1B15B9B85300A5D60D /* DevotionListViewController.xib */; };
+		CE5EEB9015BFEE7E003927D3 /* Devotion.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CE5EEB8F15BFEE7E003927D3 /* Devotion.sqlite */; };
 		CE8BCB2115B78D9F00163506 /* MainCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB1F15B78D9F00163506 /* MainCategoryViewController.m */; };
 		CE8BCB2215B78D9F00163506 /* MainCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8BCB2015B78D9F00163506 /* MainCategoryViewController.xib */; };
 		CE8BCB2B15B791FE00163506 /* ServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB2A15B791FE00163506 /* ServerManager.m */; };
@@ -106,6 +107,7 @@
 		3EAF5D1915B9B85300A5D60D /* DevotionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevotionListViewController.h; sourceTree = "<group>"; };
 		3EAF5D1A15B9B85300A5D60D /* DevotionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevotionListViewController.m; sourceTree = "<group>"; };
 		3EAF5D1B15B9B85300A5D60D /* DevotionListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DevotionListViewController.xib; sourceTree = "<group>"; };
+		CE5EEB8F15BFEE7E003927D3 /* Devotion.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Devotion.sqlite; sourceTree = "<group>"; };
 		CE8BCB1E15B78D9F00163506 /* MainCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCategoryViewController.h; sourceTree = "<group>"; };
 		CE8BCB1F15B78D9F00163506 /* MainCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCategoryViewController.m; sourceTree = "<group>"; };
 		CE8BCB2015B78D9F00163506 /* MainCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCategoryViewController.xib; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		3E1990DC15B111B20055B334 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE5EEB8E15BFEE7E003927D3 /* Resources */,
 				3E1990DD15B111B20055B334 /* Devotion-Info.plist */,
 				3E1990E115B111B20055B334 /* main.m */,
 				3E1990E315B111B20055B334 /* Devotion-Prefix.pch */,
@@ -279,6 +282,14 @@
 				3E87D6AB15BC2CB900C1C98D /* Devotion.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE5EEB8E15BFEE7E003927D3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE5EEB8F15BFEE7E003927D3 /* Devotion.sqlite */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CE8BCB1D15B78D8A00163506 /* Controllers */ = {
@@ -417,6 +428,7 @@
 				3EAF5D1D15B9B85300A5D60D /* DevotionListViewController.xib in Resources */,
 				3E87D6B115BC4ACA00C1C98D /* SettingViewController.xib in Resources */,
 				3E87D6B615BC508300C1C98D /* DetailViewController.xib in Resources */,
+				CE5EEB9015BFEE7E003927D3 /* Devotion.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

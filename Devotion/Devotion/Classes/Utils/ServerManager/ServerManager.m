@@ -48,6 +48,17 @@ static NSString* kAPIBaseURL = @"http://devotion.herokuapp.com/";
     return self.request;
 }
 
+- (ServerRequest *)getRequestVersionWithDelegate:(id<ServerRequestDelegate>)delegate
+{
+    NSString* strRequestURL = [kAPIBaseURL stringByAppendingString:@"version.json"];
+    NSLog(@"%@", strRequestURL);
+    
+    return [self openUrl:strRequestURL
+                  params:nil
+              httpMethod:@"GET"
+                delegate:delegate];
+}
+
 - (ServerRequest *)getRequestCategoryWithDelegate:(id<ServerRequestDelegate>)delegate
 {
     NSString* strRequestURL = [kAPIBaseURL stringByAppendingString:@"users/1.json"];
