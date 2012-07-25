@@ -114,7 +114,6 @@
 								<string key="IBUIText">Intro</string>
 								<reference key="IBUITextColor" ref="504170097"/>
 								<nil key="IBUIHighlightedColor"/>
-								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
 								<int key="IBUINumberOfLines">0</int>
 								<reference key="IBUIFontDescription" ref="506453861"/>
@@ -136,7 +135,6 @@
 								<string key="IBUIText">Content</string>
 								<reference key="IBUITextColor" ref="504170097"/>
 								<nil key="IBUIHighlightedColor"/>
-								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
 								<int key="IBUINumberOfLines">0</int>
 								<reference key="IBUIFontDescription" ref="506453861"/>
@@ -158,7 +156,6 @@
 								<string key="IBUIText">Application</string>
 								<reference key="IBUITextColor" ref="504170097"/>
 								<nil key="IBUIHighlightedColor"/>
-								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
 								<int key="IBUINumberOfLines">0</int>
 								<reference key="IBUIFontDescription" ref="506453861"/>
@@ -244,10 +241,10 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUIHighlightedTitle">&lt;</string>
-						<string key="IBUIDisabledTitle">&lt;</string>
-						<string key="IBUISelectedTitle">&lt;</string>
-						<string key="IBUINormalTitle">&lt;</string>
+						<string key="IBUIHighlightedTitle">List</string>
+						<string key="IBUIDisabledTitle">List</string>
+						<string key="IBUISelectedTitle">List</string>
+						<string key="IBUINormalTitle">List</string>
 						<reference key="IBUIHighlightedTitleColor" ref="990645403"/>
 						<object class="NSColor" key="IBUIDisabledTitleColor">
 							<int key="NSColorSpace">3</int>
@@ -263,20 +260,20 @@
 						</object>
 						<reference key="IBUINormalTitleColor" ref="504170097"/>
 						<reference key="IBUINormalTitleShadowColor" ref="101652495"/>
-						<object class="IBUIFontDescription" key="IBUIFontDescription">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="555234492">
 							<int key="type">1</int>
-							<double key="pointSize">28</double>
+							<double key="pointSize">20</double>
 						</object>
-						<object class="NSFont" key="IBUIFont">
+						<object class="NSFont" key="IBUIFont" id="830307296">
 							<string key="NSName">Helvetica</string>
-							<double key="NSSize">28</double>
+							<double key="NSSize">20</double>
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
 					<object class="IBUIButton" id="1013896120">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{264, 10}, {45, 33}}</string>
+						<string key="NSFrame">{{253, 10}, {54, 33}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="962626259"/>
@@ -286,10 +283,10 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUIHighlightedTitle">H</string>
-						<string key="IBUIDisabledTitle">H</string>
-						<string key="IBUISelectedTitle">H</string>
-						<string key="IBUINormalTitle">H</string>
+						<string key="IBUIHighlightedTitle">Home</string>
+						<string key="IBUIDisabledTitle">Home</string>
+						<string key="IBUISelectedTitle">Home</string>
+						<string key="IBUINormalTitle">Home</string>
 						<reference key="IBUIHighlightedTitleColor" ref="990645403"/>
 						<object class="NSColor" key="IBUIDisabledTitleColor">
 							<int key="NSColorSpace">3</int>
@@ -303,15 +300,8 @@
 						</object>
 						<reference key="IBUINormalTitleColor" ref="504170097"/>
 						<reference key="IBUINormalTitleShadowColor" ref="101652495"/>
-						<object class="IBUIFontDescription" key="IBUIFontDescription">
-							<int key="type">1</int>
-							<double key="pointSize">24</double>
-						</object>
-						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">24</double>
-							<int key="NSfFlags">16</int>
-						</object>
+						<reference key="IBUIFontDescription" ref="555234492"/>
+						<reference key="IBUIFont" ref="830307296"/>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
@@ -544,9 +534,9 @@
 				<string key="1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="10.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="21.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="1" key="21.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<real value="3" key="21.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="22.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<real value="1" key="22.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
+				<real value="3" key="22.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="26.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<real value="3" key="26.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
