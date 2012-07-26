@@ -13,7 +13,6 @@
 		3E1990DA15B111B20055B334 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1990D915B111B20055B334 /* CoreData.framework */; };
 		3E1990E215B111B20055B334 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990E115B111B20055B334 /* main.m */; };
 		3E1990E615B111B20055B334 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990E515B111B20055B334 /* AppDelegate.m */; };
-		3E1990E915B111B20055B334 /* Devotion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990E715B111B20055B334 /* Devotion.xcdatamodeld */; };
 		3E19910915B112F30055B334 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990F315B112F30055B334 /* ASIAuthenticationDialog.m */; };
 		3E19910A15B112F30055B334 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990F615B112F30055B334 /* ASIDataCompressor.m */; };
 		3E19910B15B112F30055B334 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1990F815B112F30055B334 /* ASIDataDecompressor.m */; };
@@ -53,6 +52,9 @@
 		CE8BCB5215B7945900163506 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB4415B7945900163506 /* SBJsonBase.m */; };
 		CE8BCB5315B7945900163506 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB4615B7945900163506 /* SBJsonParser.m */; };
 		CE8BCB5415B7945900163506 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB4815B7945900163506 /* SBJsonWriter.m */; };
+		CEC2545D15C0FECD00B878FD /* Devotion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEC2545B15C0FECD00B878FD /* Devotion.xcdatamodeld */; };
+		CEC2546015C1002F00B878FD /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2545F15C1002F00B878FD /* CoreDataManager.m */; };
+		CEC2546A15C1044500B878FD /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2546915C1044500B878FD /* Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +68,6 @@
 		3E1990E315B111B20055B334 /* Devotion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Devotion-Prefix.pch"; sourceTree = "<group>"; };
 		3E1990E415B111B20055B334 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E1990E515B111B20055B334 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3E1990E815B111B20055B334 /* Devotion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Devotion.xcdatamodel; sourceTree = "<group>"; };
 		3E1990F215B112F30055B334 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		3E1990F315B112F30055B334 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		3E1990F415B112F30055B334 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -140,6 +141,11 @@
 		CE8BCB4715B7945900163506 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		CE8BCB4815B7945900163506 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		CE8BCB5515B79A3500163506 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		CEC2545C15C0FECD00B878FD /* Devotion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Devotion.xcdatamodel; sourceTree = "<group>"; };
+		CEC2545E15C1002F00B878FD /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		CEC2545F15C1002F00B878FD /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		CEC2546815C1044500B878FD /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		CEC2546915C1044500B878FD /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +205,7 @@
 				3E1990EF15B112F30055B334 /* Classes */,
 				3E1990E415B111B20055B334 /* AppDelegate.h */,
 				3E1990E515B111B20055B334 /* AppDelegate.m */,
-				3E1990E715B111B20055B334 /* Devotion.xcdatamodeld */,
+				CEC2545B15C0FECD00B878FD /* Devotion.xcdatamodeld */,
 				3E1990DC15B111B20055B334 /* Supporting Files */,
 			);
 			path = Devotion;
@@ -235,6 +241,8 @@
 				CE8BCB2815B791EC00163506 /* ServerManager */,
 				3E1990F115B112F30055B334 /* ASIHTTPRequest */,
 				3E19910615B112F30055B334 /* Reachability */,
+				CEC2545E15C1002F00B878FD /* CoreDataManager.h */,
+				CEC2545F15C1002F00B878FD /* CoreDataManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -278,6 +286,8 @@
 		3E87D6A815BC2C9B00C1C98D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CEC2546815C1044500B878FD /* Category.h */,
+				CEC2546915C1044500B878FD /* Category.m */,
 				3E87D6AA15BC2CB900C1C98D /* Devotion.h */,
 				3E87D6AB15BC2CB900C1C98D /* Devotion.m */,
 			);
@@ -441,7 +451,6 @@
 			files = (
 				3E1990E215B111B20055B334 /* main.m in Sources */,
 				3E1990E615B111B20055B334 /* AppDelegate.m in Sources */,
-				3E1990E915B111B20055B334 /* Devotion.xcdatamodeld in Sources */,
 				3E19910915B112F30055B334 /* ASIAuthenticationDialog.m in Sources */,
 				3E19910A15B112F30055B334 /* ASIDataCompressor.m in Sources */,
 				3E19910B15B112F30055B334 /* ASIDataDecompressor.m in Sources */,
@@ -469,6 +478,9 @@
 				3E87D6AC15BC2CB900C1C98D /* Devotion.m in Sources */,
 				3E87D6B015BC4ACA00C1C98D /* SettingViewController.m in Sources */,
 				3E87D6B515BC508300C1C98D /* DetailViewController.m in Sources */,
+				CEC2545D15C0FECD00B878FD /* Devotion.xcdatamodeld in Sources */,
+				CEC2546015C1002F00B878FD /* CoreDataManager.m in Sources */,
+				CEC2546A15C1044500B878FD /* Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,12 +622,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3E1990E715B111B20055B334 /* Devotion.xcdatamodeld */ = {
+		CEC2545B15C0FECD00B878FD /* Devotion.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3E1990E815B111B20055B334 /* Devotion.xcdatamodel */,
+				CEC2545C15C0FECD00B878FD /* Devotion.xcdatamodel */,
 			);
-			currentVersion = 3E1990E815B111B20055B334 /* Devotion.xcdatamodel */;
+			currentVersion = CEC2545C15C0FECD00B878FD /* Devotion.xcdatamodel */;
 			path = Devotion.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

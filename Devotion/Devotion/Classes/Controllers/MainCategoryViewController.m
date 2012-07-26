@@ -9,13 +9,19 @@
 #import "MainCategoryViewController.h"
 #import "GuideViewController.h"
 #import "SettingViewController.h"
+#import "AppDelegate.h"
+#import "CoreDataManager.h"
+#import "Category.h"
 
 @interface MainCategoryViewController ()
 
 @property (nonatomic, retain) ServerManager* m_pServerManager;
 @property (nonatomic, retain) NSMutableArray* m_pMArrCategories;
+@property (nonatomic, retain) NSString* pStrNewVersion;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
 - (void)goSetting;
+- (void)performFetchedResultController;
 
 @end
 
@@ -23,11 +29,15 @@
 
 @synthesize m_pServerManager;
 @synthesize m_pMArrCategories;
+@synthesize pStrNewVersion;
+@synthesize fetchedResultsController;
 
 - (void)dealloc
 {
     [m_pServerManager release];
     [m_pMArrCategories release];
+    [pStrNewVersion release];
+    [fetchedResultsController release];
     
     [super dealloc];
 }
@@ -114,6 +124,58 @@
     [pNavigationController release];
 }
 
+- (void)performFetchedResultController
+{
+    NSError *error = nil;        
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        /*
+         Replace this implementation with code to handle the error appropriately.
+         
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+         */
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
+#pragma mark -
+#pragma mark Fetched results controller
+
+- (NSFetchedResultsController *)fetchedResultsController {
+    
+	if (fetchedResultsController != nil) {
+        return fetchedResultsController;
+    }
+    
+    NSManagedObjectContext* managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    
+	// Create and configure a fetch request with the Book entity.
+	NSFetchRequest *fetchRequest	= [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity		= [NSEntityDescription entityForName:@"Category" inManagedObjectContext:managedObjectContext];
+	[fetchRequest setEntity:entity];
+	
+	// Create the sort descriptors array.
+    NSSortDescriptor *devotionDescriptor	= [[NSSortDescriptor alloc] initWithKey:@"updated_at" ascending:NO];
+    NSArray *sortDescriptors				= [[NSArray alloc] initWithObjects:devotionDescriptor, nil];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+	
+	// Create and initialize the fetch results controller.
+	NSFetchedResultsController *aFetchedResultsController	= [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                                                managedObjectContext:managedObjectContext 
+                                                                                                  sectionNameKeyPath:nil
+                                                                                                           cacheName:@"Root"];
+	self.fetchedResultsController							= aFetchedResultsController;
+    fetchedResultsController.delegate						= self;
+	
+	// Memory management.
+	[aFetchedResultsController release];
+	[fetchRequest release];
+    [devotionDescriptor release];
+    [sortDescriptors release];
+	
+	return fetchedResultsController;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -141,9 +203,9 @@
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
     }
     
-    NSDictionary* pDicCategory = (NSDictionary *)[self.m_pMArrCategories objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = [pDicCategory objectForKey:@"title"];
+    Category* category = (Category *)[self.m_pMArrCategories objectAtIndex:indexPath.row];
+        
+    cell.textLabel.text = category.title;
     
     return cell;
 }
@@ -198,12 +260,30 @@
     
     [self.navigationController pushViewController:pViewController animated:YES];
     
-    NSDictionary* pDicCategory = (NSDictionary *)[self.m_pMArrCategories objectAtIndex:indexPath.row];
-    pViewController.m_pLbGuide.text = [pDicCategory objectForKey:@"guide"];
+    Category* category = (Category *)[self.m_pMArrCategories objectAtIndex:indexPath.row];
+    pViewController.m_pLbGuide.text = category.guide;
     
-    [[Devotion sharedObject] setPStrCategoryId:[pDicCategory objectForKey:@"id"]];
+    [[Devotion sharedObject] setPStrCategoryId:category.category_id];
     
     [pViewController release];
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            
+            break;
+            
+        case 1:
+            [self.m_pServerManager getRequestCategoryWithDelegate:self];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark - ServerRequestDelegate
@@ -245,16 +325,51 @@
 - (void)requestDevotion:(ServerRequest *)request didLoad:(id)result
 {    
     NSLog(@"%@", result);
-    
+        
     if ([[request strURL] hasSuffix:@"version.json"])
     {
-        NSLog(@"Pass");
-    }
-    else
-    {
-        self.m_pMArrCategories = result;
+        NSString* pStrOldVersion = [[NSUserDefaults standardUserDefaults] valueForKey:CATEGORY_VERSION];
         
-        [self.tableView reloadData];   
+        NSLog(@"%@", pStrOldVersion);
+        
+        if (![[result objectForKey:@"version"] isEqualToString:pStrOldVersion])
+        {
+            UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Info"
+                                                                message:@"Contents updated! Try?"
+                                                               delegate:self
+                                                      cancelButtonTitle:@"No"
+                                                      otherButtonTitles:@"Yes", nil];
+            [alertView show];
+            [alertView release];
+            
+            pStrNewVersion = [[NSString alloc] initWithString:[result objectForKey:@"version"]];
+            
+            NSLog(@"%@", pStrNewVersion);
+        }
+    }
+    else if ([[request strURL] hasSuffix:@"users/1.json"])
+    {
+        [self performFetchedResultController];
+        
+        NSManagedObjectContext* managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+        
+        if ([CoreDataManager deleteTableWithData:self.fetchedResultsController managedObjectContext:managedObjectContext]) {
+            NSLog(@"delete success!");
+        }
+        
+        if ([CoreDataManager saveTableWithData:(NSArray *)result toTable:@"Category" managedObjectContext:managedObjectContext]) {
+            NSLog(@"insert success!");
+            [self performFetchedResultController];
+        }
+        
+        [[NSUserDefaults standardUserDefaults] setValue:pStrNewVersion forKey:CATEGORY_VERSION];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] valueForKey:CATEGORY_VERSION]);
+        
+        self.m_pMArrCategories = (NSMutableArray *)[self.fetchedResultsController fetchedObjects];
+                
+        [self.tableView reloadData];
     }
 }
 

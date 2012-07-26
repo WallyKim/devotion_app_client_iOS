@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainCategoryViewController : UITableViewController <ServerRequestDelegate>
+@interface MainCategoryViewController : UITableViewController <ServerRequestDelegate, NSFetchedResultsControllerDelegate, UIAlertViewDelegate>
 
 @end

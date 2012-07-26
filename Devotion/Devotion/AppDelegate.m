@@ -141,11 +141,24 @@
         return __persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Devotion.sqlite"];
+    NSString* pStrDocStorePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDirectory, YES) lastObject] stringByAppendingPathComponent:@"Devotion.sqlite"];
+    NSFileManager* fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:pStrDocStorePath])
+    {
+        NSString* pStrBundlePath = [[NSBundle mainBundle] pathForResource:@"Devotion" ofType:@"sqlite"];
+        if (pStrBundlePath)
+        {
+            [fileManager copyItemAtPath:pStrBundlePath toPath:pStrDocStorePath error:NULL];
+        }
+    }
+    
+    NSURL *storeURL = [NSURL fileURLWithPath:pStrDocStorePath]; // [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Devotion.sqlite"];
+    
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
         /*
          Replace this implementation with code to handle the error appropriately.
          

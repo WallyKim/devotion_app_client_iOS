@@ -14,6 +14,7 @@ enum EnmNetworkState {
 };
 
 #define NofPageDetail       4
-
+#define CATEGORY_VERSION    @"CATEGORY_VERSION"
+#define DEVOTION_VERSION    @"DEVOTION_VERSION"
 
 #endif
