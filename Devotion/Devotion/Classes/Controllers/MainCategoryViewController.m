@@ -346,6 +346,12 @@
             
             NSLog(@"%@", pStrNewVersion);
         }
+        else
+        {
+            [self performFetchedResultController];
+            self.m_pMArrCategories = (NSMutableArray *)[self.fetchedResultsController fetchedObjects];
+            [self.tableView reloadData];
+        }
     }
     else if ([[request strURL] hasSuffix:@"users/1.json"])
     {
