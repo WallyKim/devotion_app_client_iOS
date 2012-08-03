@@ -52,6 +52,7 @@
 		CE8BCB5215B7945900163506 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB4415B7945900163506 /* SBJsonBase.m */; };
 		CE8BCB5315B7945900163506 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB4615B7945900163506 /* SBJsonParser.m */; };
 		CE8BCB5415B7945900163506 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BCB4815B7945900163506 /* SBJsonWriter.m */; };
+		CEBA225F15CB9A4A006F3D98 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBA225E15CB9A4A006F3D98 /* StoreKit.framework */; };
 		CEC2545D15C0FECD00B878FD /* Devotion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEC2545B15C0FECD00B878FD /* Devotion.xcdatamodeld */; };
 		CEC2546015C1002F00B878FD /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2545F15C1002F00B878FD /* CoreDataManager.m */; };
 		CEC2546A15C1044500B878FD /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC2546915C1044500B878FD /* Category.m */; };
@@ -141,6 +142,7 @@
 		CE8BCB4715B7945900163506 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		CE8BCB4815B7945900163506 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		CE8BCB5515B79A3500163506 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		CEBA225E15CB9A4A006F3D98 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CEC2545C15C0FECD00B878FD /* Devotion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Devotion.xcdatamodel; sourceTree = "<group>"; };
 		CEC2545E15C1002F00B878FD /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		CEC2545F15C1002F00B878FD /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBA225F15CB9A4A006F3D98 /* StoreKit.framework in Frameworks */,
 				3E19911915B113950055B334 /* libz.dylib in Frameworks */,
 				3E19911715B113880055B334 /* MobileCoreServices.framework in Frameworks */,
 				3E19911515B1137B0055B334 /* SystemConfiguration.framework in Frameworks */,
@@ -188,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				3E19911815B113950055B334 /* libz.dylib */,
+				CEBA225E15CB9A4A006F3D98 /* StoreKit.framework */,
 				3E19911615B113880055B334 /* MobileCoreServices.framework */,
 				3E19911415B1137B0055B334 /* SystemConfiguration.framework */,
 				3E19911215B113710055B334 /* CFNetwork.framework */,
